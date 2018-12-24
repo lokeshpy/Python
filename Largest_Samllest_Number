@@ -1,0 +1,20 @@
+largest = None
+smallest = None
+while True:
+    try:
+        num = input("Enter a number: ")
+        if num == "done":
+            break
+#This print statement is not needed, but incase if you want an see input value, this step can be enabled.
+        #print (num)
+        num = int(num)
+        if largest is None or largest < num:
+            largest = num
+        elif smallest is None or smallest > num:
+             smallest = num
+    except :
+#you change below statement of your choice.
+        print("Invalid Input") 
+
+print ("Maximum is", largest)
+print ("Minimum is", smallest)
