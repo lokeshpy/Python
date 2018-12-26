@@ -1,0 +1,20 @@
+# Use the file name mbox-short.txt as the file name
+fname = input("Enter file name: ")
+fh = open(fname)
+count=0
+tot=0
+for line in fh:
+    if line.startswith("X-DSPAM-Confidence:") :
+        count=count+1
+        #print(count)
+        m=line.find(':')
+        #print(m)
+        n=float(line[m+1:].rstrip())
+        #n=float(n), i inculded this statment above to reduce the code line
+        tot=tot+n
+        #l=float(n)
+        #print(tot)
+        #print('number of :',count)
+        #fx=fname[
+    #print(line)
+print("Average spam confidence:", tot/count)
