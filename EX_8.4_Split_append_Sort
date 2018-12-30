@@ -10,3 +10,4 @@ for line in fh:
             m.append(word)
 m.sort()
 print(m)
+
