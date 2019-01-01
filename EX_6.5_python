@@ -1,0 +1,8 @@
+text = "X-DSPAM-Confidence:    0.8475";
+#y=len(text)
+#print(y)
+s=text.find(':')
+#print(s)
+m=text[s+5:]
+n=float(m)
+print(n)
